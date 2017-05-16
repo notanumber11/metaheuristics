@@ -1,5 +1,6 @@
 "EnxCo\303\261ecemento.jar"
 Improvement
-InputFiles/
 OutputFiles.iml
-
+/EnxCoñecemento.jar
+/out/
+/.idea/
