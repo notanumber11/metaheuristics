@@ -25,7 +25,6 @@ public class BaseEvolutionaryB extends BaseEvolutionaryA {
     public BaseEvolutionaryB(String distancesPath) {
 
         super(distancesPath);
-        System.out.println("Ejecutando PRACTICA MEJORADA");
 
         // Size of parameters
         numberOfIndividuals = 150;
@@ -46,7 +45,6 @@ public class BaseEvolutionaryB extends BaseEvolutionaryA {
         // Changing the probability of crossover and mutatin
         probabilityOfCrossover = 0.95;
         probabilityOfMutation = 0.05;
-
 
     }
 
@@ -71,14 +69,14 @@ public class BaseEvolutionaryB extends BaseEvolutionaryA {
                 for(int i =0 ; i < allIndividuals.size(); i++){
                     mean +=allIndividuals.get(i).getCost();
                 }
-
+                ArrayList<Citys> citysToRemove = new ArrayList<>();
                 mean /=allIndividuals.size();
                 for (Citys city:allIndividuals) {
                     if(city.getCost()<=mean){
-                        allIndividuals.remove(city);
+                        citysToRemove.add(city);
                     }
                 }
-
+                allIndividuals.remove(citysToRemove);
                 while(allIndividuals.size()<initSize){
                     Citys city = new Citys(m_Distances,0.5);
                     allIndividuals.add(city);

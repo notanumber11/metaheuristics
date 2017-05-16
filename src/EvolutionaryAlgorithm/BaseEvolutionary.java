@@ -20,7 +20,7 @@ public class BaseEvolutionary {
     protected   double sizeOfElitism =  percentageOfElitism*numberOfIndividuals;
     protected   double probabilityOfCrossover = 0.9;
     protected   double probabilityOfMutation = 0.01;
-    protected   int numberOfIterations = 1000;
+    protected   int numberOfIterations = 500;
 
     // Results
     protected Citys bestSolutionEver;
@@ -174,7 +174,7 @@ public class BaseEvolutionary {
         Citys citys2;
 
         System.out.println("ITERACION: "+iteration+", CRUCE ");
-        for(int i = 0; i < (numberOfIndividuals- sizeOfElitism) ; i+=2){
+        for(int i = 0; i < (numberOfIndividuals- sizeOfElitism)-1 ; i+=2){
 
             citys1 = intermediateIndividuals.get(i);
             citys2 = intermediateIndividuals.get(i+1);

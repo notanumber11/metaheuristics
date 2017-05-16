@@ -19,7 +19,6 @@ public class Main {
         // Load File with the distances between citys
         String distancesPath = "InputFiles/distancias_ce_100.txt";
 
-
         // Init distances and solution matrix, this is used to the tabu and annealing algorithm
         Distances distances = new Distances(distancesPath);
         Solution solution = new Solution(distances);
@@ -39,18 +38,13 @@ public class Main {
         PrinterEvolutionary.activePrintToFile("OutputFiles/resultsEvolutionaryA.txt");
         BaseEvolutionary baseEvolutionary = new BaseEvolutionaryA(distancesPath);
         baseEvolutionary.start();
-//
+
         // EVOLUTIONARY ALGORITHM VERSION 2
         PrinterEvolutionary.activePrintToFile("OutputFiles/resultsEvolutionaryB.txt");
         baseEvolutionary = new BaseEvolutionaryB(distancesPath);
         baseEvolutionary.start();
 
         }
-
-
-
-
-
 }
 
 
