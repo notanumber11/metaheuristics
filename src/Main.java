@@ -25,22 +25,22 @@ public class Main {
 
 
         // TABU ALGORITHM
-        PrinterEvolutionary.activePrintToFile("OutputFiles/resultsTabu.txt");
+        PrinterEvolutionary.activePrintToFile("resultsTabu.txt");
         Tabu tabu = new Tabu(solution);
         tabu.startTabu();
 
         // ANNEALING ALGORITHM
-        PrinterEvolutionary.activePrintToFile("OutputFiles/resultsAnnealing.txt");
+        PrinterEvolutionary.activePrintToFile("resultsAnnealing.txt");
         Annealing annealing = new Annealing(solution);
         annealing.startAnnealing();
 
         // EVOLUTIONARY ALGORITHM VERSION 1
-        PrinterEvolutionary.activePrintToFile("OutputFiles/resultsEvolutionaryA.txt");
+        PrinterEvolutionary.activePrintToFile("resultsEvolutionaryA.txt");
         BaseEvolutionary baseEvolutionary = new BaseEvolutionaryA(distancesPath);
         baseEvolutionary.start();
 
         // EVOLUTIONARY ALGORITHM VERSION 2
-        PrinterEvolutionary.activePrintToFile("OutputFiles/resultsEvolutionaryB.txt");
+        PrinterEvolutionary.activePrintToFile("resultsEvolutionaryB.txt");
         baseEvolutionary = new BaseEvolutionaryB(distancesPath);
         baseEvolutionary.start();
 
